@@ -1,16 +1,108 @@
+<!-- <!DOCTYPE>
 <html>
-  <head>
-    <title>OFFOJ</title>
-  </head>
-  <body>
-    This is only a OfflineJudge.
-  </body>
+
+<head>
+    <meta charset="utf-8" />
+    <title>下划线动画</title>
+    <style>
+        a,
+        a:link,
+        a:visited,
+        a:focus {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .center-to-head {
+            position: relative;
+        }
+
+        .center-to-head::after {
+            content: '';
+            display: block;
+            /*开始时候下划线的宽度为100%*/
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            bottom: -10px;
+            background: #000;
+            transition: all 0.3s ease-in-out;
+            /*通过transform的缩放scale来让初始时x轴为0*/
+            transform: scale3d(0, 1, 1);
+            /*将坐标原点移到元素的中间，以原点为中心进行缩放*/
+            transform-origin: 50% 0;
+        }
+
+        .center-to-head:hover::after {
+            /*鼠标经过时还原到正常比例*/
+            transform: scale3d(1, 1, 1);
+        }
+    </style>
+</head>
+
+<body> 
+    昨天我看到了一个很有意思的链接，你可以去看一看，真的特别的有意思：&nbsp;&nbsp;<a href="#" class="center-to-head">wdnmd</a> &nbsp;很有意识，是吧awa
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .offoj-head {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #ffcc33;
+    }
+     
+    .offoj-head-li {
+        float: left;
+    }
+     
+    .offoj-head-li a{
+        display: block;
+        color: white;
+        padding: 20px 40px;
+        text-decoration: none;
+        top:0;
+        bottom:0;
+        font-size: 20px;
+        font-family: "方正硬笔楷书简体";
+    }
+     
+    /*鼠标移动到选项上修改背景颜色 */
+    .offoj-head-li a:hover {
+        background-color: #33ffcc;
+    }
+    
+    .offoj-head {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        left:0;
+    }
+    </style>
+
+    <ul class="offoj-head">
+        <li class="offoj-head-li"><a href="#" style="font-family: Mojangles;height:100%;color: #33ccff;font-size:19px;">OFF OJ</a></li>
+        <li class="offoj-head-li"><a href="./ProblemList">题库</a></li>
+        <li class="offoj-head-li"><a href="./Data">资料</a></li>
+    </ul>
+    <br><br><br><br>
+</head>
+<body>
+    请不要问这是什么OJ，这是<del>国产的OfflineJudge，简称</del>OJ
+    <br>
+    在这里，你可以愉快的看题，看题，看题<del>（当然没有做题了）</del>
+    <br>
+    你可以愉快的下载数据自测，SPJ会给出测试程序
+    <br>
+    <del>就没了</del>
+</body>
 </html>
-  
-  
-  
-  
-  
-  
-  
-  
